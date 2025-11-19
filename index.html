@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTH Wanapaksi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <nav class="nav glass-card">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/LogoWanapaksi.png" alt="Wanapaksi Logo" class="logo-icon">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-section="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#birds" class="nav-link" data-section="birds">Handbook</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <div class="toggle-switch">
+                            <div class="toggle-background">
+                                <!-- Night Side -->
+                                <div class="night-side">
+                                    <div class="moon"></div>
+                                    <div class="star star-1"></div>
+                                    <div class="star star-2"></div>
+                                    <div class="star star-3"></div>
+                                    <div class="star star-4"></div>
+                                    <div class="landscape night-landscape"></div>
+                                </div>
+                                <!-- Day Side -->
+                                <div class="day-side">
+                                    <div class="sun"></div>
+                                    <div class="cloud cloud-1"></div>
+                                    <div class="cloud cloud-2"></div>
+                                    <div class="tree"></div>
+                                    <div class="landscape day-landscape"></div>
+                                </div>
+                            </div>
+                            <div class="toggle-knob"></div>
+                        </div>
+                    </button>
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content glass-card">
+                <h1 class="hero-title">KTH Wanapaksi</h1>
+                <p class="hero-subtitle">Kelompok Tani Hutan Wanapaksi</p>
+                <p class="hero-description">Kelompok Tani Hutan (KTH) Wanapaksi lahir untuk memberikan solusi atas kebutuhan kelembagaan di tingkat desa guna meningkatkan peran aktif masyarakat dalam konservasi khususnya di Desa Jatimulyo </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Desa</h2>
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="card-icon">📍</div>
+                    <h3>Lokasi</h3>
+                    <p>Desa Jatimulyo terletak di Kecamatan Girimulyo, Kulon Progo, DI Yogyakarta yang merupakan salah satu desa wisata konservasi populer di DIY.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Masyarakat</h3>
+                    <p>Masyarakat yang ramah dan gotong royong, menjaga tradisi dan budaya lokal dengan penuh kebanggaan.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">🌿</div>
+                    <h3>Alam</h3>
+                    <p>Keanekaragaman hayati yang kaya, termasuk berbagai spesies burung yang menjadi bagian penting dari ekosistem desa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bird Morphology Section -->
+    <section class="birds section" id="birds">
+        <div class="container">
+            <h2 class="section-title">Handbook Morfologi Burung</h2>
+            <p class="section-description">Pelajari berbagai jenis burung yang menghuni kawasan desa KTH Wanapaksi</p>
+            
+            <!-- Search Box -->
+            <div class="search-container">
+                <div class="search-box glass-card">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="morphologySearch" 
+                        class="search-input" 
+                        placeholder="Cari berdasarkan morfologi (contoh: paruh, sayap, ekor, ukuran, warna, kaki)..."
+                        aria-label="Search birds by morphology"
+                    >
+                    <button class="search-clear" id="searchClear" aria-label="Clear search" style="display: none;">
+                        ✕
+                    </button>
+                </div>
+                <p class="search-hint">Cari berdasarkan karakteristik morfologi seperti paruh, sayap, ekor, ukuran, warna, atau kaki</p>
+            </div>
+
+            <div class="birds-grid" id="birdsGrid">
+                <!-- Bird cards will be generated by JavaScript -->
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="glass-card no-results-card">
+                    <span class="no-results-icon">🔍</span>
+                    <h3>Tidak ada hasil ditemukan</h3>
+                    <p>Coba gunakan kata kunci lain atau hapus filter untuk melihat semua burung</p>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="glass-card footer-content">
+                <p>&copy; 2025 KTH Wanapaksi. Semua hak dilindungi.</p>
+                <p>Kolaborasi dengan MBKM Pengabdian UGM</p>
+                <div class="footer-buttons">
+                    <a href="mailto:salman.alinazar04@gmail.com" class="footer-btn email-btn" aria-label="Email">
+                        <span class="btn-icon">📧</span>
+                        <span class="btn-text">Email</span>
+                    </a>
+                    <a href="https://wa.me/62811257828" target="_blank" rel="noopener noreferrer" class="footer-btn whatsapp-btn" aria-label="WhatsApp">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-text">WhatsApp</span>
+                    </a>
+                    <a href="http://www.instagram.com/kthwanapaksi/" target="_blank" rel="noopener noreferrer" class="footer-btn instagram-btn" aria-label="Instagram">
+                        <span class="btn-icon">📷</span>
+                        <span class="btn-text">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
